@@ -354,7 +354,7 @@ minions-calendar/
 
 **BEYOND STANDARD PATTERN**
 
-These utilities and classes are specific to `minions-calendar`:
+These utilities and classes are specific to `@minions-calendar/sdk`:
 
 **CalendarEngine**
 - RRULE-compatible recurrence evaluation using standard RFC 5545 syntax
@@ -629,7 +629,7 @@ Include working examples for:
 
 **Google Calendar Integration** (TypeScript)
 ```typescript
-import { CalendarEngine, ICalExporter } from 'minions-calendar';
+import { CalendarEngine, ICalExporter } from '@minions-calendar/sdk';
 import { google } from 'googleapis';
 
 const calendar = google.calendar('v3');
@@ -665,7 +665,7 @@ if free_slots:
 
 **Conflict Detection Workflow** (TypeScript)
 ```typescript
-import { ConflictDetector } from 'minions-calendar';
+import { ConflictDetector } from '@minions-calendar/sdk';
 
 const detector = new ConflictDetector();
 const conflicts = await detector.findConflicts(allEventIds);
