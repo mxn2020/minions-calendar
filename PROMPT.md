@@ -146,6 +146,10 @@ Write a complete markdown specification document covering:
 **2. THE CORE LIBRARY** (`/packages/core`)
 
 A framework-agnostic TypeScript library built on `minions-sdk`. Must include:
+- **Unified Client Architecture**:
+  - A standalone `MinionsCalendar` client class that wraps all primitives and utilities in a unified facade.
+  - A `CalendarPlugin` class that implements `MinionPlugin` for mounting onto the core `Minions` client (e.g. `minions.calendar`).
+  - Both modular (direct imports) and centralized (client instance) usage must be supported.
 
 - Full TypeScript type definitions for all calendar-specific types
 - `CalendarEngine` class — core scheduling and recurrence engine
@@ -178,6 +182,9 @@ A framework-agnostic TypeScript library built on `minions-sdk`. Must include:
 **3. THE PYTHON SDK** (`/packages/python`)
 
 A complete Python port of the core library with identical functionality:
+- **Unified Client Architecture**:
+  - `MinionsCalendar` standalone client class.
+  - `CalendarPlugin` class for mounting onto the core `Minions` client.
 
 - Python type hints for all classes and methods
 - `CalendarEngine`, `ConflictDetector`, `AvailabilityEngine`, `TimezoneManager`, `ICalExporter`, `NaturalLanguageParser` classes
